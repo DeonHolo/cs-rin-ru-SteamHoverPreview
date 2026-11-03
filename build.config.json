@@ -1,0 +1,9 @@
+{
+  "site": "csrinru",
+  "output": "csrinruSteamHoverPreview.user.js",
+  "adapter": "src/adapters/csrinru.mjs",
+  "factory": "createCsrinruAdapter",
+  "cleaner": "cleanForumTitle",
+  "canonicalCore": true,
+  "corePath": "src/core"
+}

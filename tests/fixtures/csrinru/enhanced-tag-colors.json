@@ -1,0 +1,112 @@
+{
+  "source": "https://github.com/SubZeroPL/cs-rin-ru-enhanced-mod/blob/master/cs-rin-ru-enhanced-mod.user.js",
+  "sourceVersion": "1.2.9",
+  "originalHoverSnapshot": "a0340f8",
+  "cases": [
+    {
+      "background": [28, 28, 28],
+      "tag": "[CRACKED]",
+      "color": "#e14564"
+    },
+    {
+      "background": [28, 28, 28],
+      "tag": "[Early Access]",
+      "color": "#b7ba6d"
+    },
+    {
+      "background": [28, 28, 28],
+      "tag": "[VR Optional]",
+      "color": "#4ff2a6"
+    },
+    {
+      "background": [28, 28, 28],
+      "tag": "[NOT CRACKED / HYPERVISOR]",
+      "color": "#4d77f4"
+    },
+    {
+      "background": [28, 28, 28],
+      "tag": "[Linux]",
+      "color": "#fe5dc2"
+    },
+    {
+      "background": [28, 28, 28],
+      "tag": "[测试]",
+      "color": "#82cd32"
+    },
+    {
+      "background": [28, 28, 28],
+      "tag": "[🎮]",
+      "color": "#dbf759"
+    },
+    {
+      "background": [32, 32, 32],
+      "tag": "[CRACKED]",
+      "color": "#ba73cd"
+    },
+    {
+      "background": [32, 32, 32],
+      "tag": "[Early Access]",
+      "color": "#b7ba6d"
+    },
+    {
+      "background": [32, 32, 32],
+      "tag": "[VR Optional]",
+      "color": "#4ff2a6"
+    },
+    {
+      "background": [32, 32, 32],
+      "tag": "[NOT CRACKED / HYPERVISOR]",
+      "color": "#4d77f4"
+    },
+    {
+      "background": [32, 32, 32],
+      "tag": "[Linux]",
+      "color": "#fe5dc2"
+    },
+    {
+      "background": [32, 32, 32],
+      "tag": "[测试]",
+      "color": "#57ecf3"
+    },
+    {
+      "background": [32, 32, 32],
+      "tag": "[🎮]",
+      "color": "#dbf759"
+    },
+    {
+      "background": [240, 240, 240],
+      "tag": "[CRACKED]",
+      "color": "#e14564"
+    },
+    {
+      "background": [240, 240, 240],
+      "tag": "[Early Access]",
+      "color": "#595165"
+    },
+    {
+      "background": [240, 240, 240],
+      "tag": "[VR Optional]",
+      "color": "#482e5b"
+    },
+    {
+      "background": [240, 240, 240],
+      "tag": "[NOT CRACKED / HYPERVISOR]",
+      "color": "#f8464b"
+    },
+    {
+      "background": [240, 240, 240],
+      "tag": "[Linux]",
+      "color": "#96cc0d"
+    },
+    {
+      "background": [240, 240, 240],
+      "tag": "[测试]",
+      "color": "#121c90"
+    },
+    {
+      "background": [240, 240, 240],
+      "tag": "[🎮]",
+      "color": "#1fac3b"
+    }
+  ]
+}
