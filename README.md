@@ -10,6 +10,10 @@ A userscript that displays Steam game information when hovering over game topic 
   />
 </center>
 
+## Wiki and Code Review
+
+The [project wiki](docs/wiki/Home.md) covers behavior and architecture. The current **unpublished 4.01 patch** restores [Enhanced tag colours and adds a SteamDB logo](docs/wiki/Enhanced-Tag-Colors.md). It retains [title search inside the chooser](docs/wiki/Search-by-Name.md), plus [matching fixes and a plain-language explanation](docs/wiki/Matching-Explained.md). Use the [Markdown release checklist](RELEASE_CHECKLIST.md) and [paste-ready Greasy Fork changelog](GREASYFORK_CHANGELOG.md) to review this release. Older patch labels in dated test reports are internal development snapshots, not public releases.
+
 ## Features
 
 - **Steam Media Carousel** - Steam header image first, with screenshots and click-to-play videos when available
@@ -17,8 +21,8 @@ A userscript that displays Steam game information when hovering over game topic 
 - **Theatre Mode** - Open screenshots and trailers in a larger Steam-style media viewer with navigation, video controls, and fullscreen support
 - **Theatre Footer Actions** - Open the Steam page or the CS.RIN.RU topic's latest page directly from theatre mode
 - **Description** - Short game description from Steam
-- **Steam Ratings** - Visual star rating with review summary and count
-- **User-Defined Tags** - Actual Steam community tags from the Steam store page when available, with genres as fallback
+- **Steam Reviews** - Original plain Rating row with stars, Steam category and actual review count, plus distinct zero/error states
+- **Actual Steam Tags First** - Real Steam tags in the first meaningful preview, with no genre substitution
 - **Release Date** - Game release information
 - **AppID Utility** - Click the Steam AppID to copy it, or use the compact external link to open SteamDB
 - **CS.RIN Thread Tags** - Shows bracketed topic tags in the hover card with OG CS.RIN.RU Enhanced-style colors
@@ -26,8 +30,8 @@ A userscript that displays Steam game information when hovering over game topic 
 - **Open Latest Page** - Opens the latest page of the CS.RIN.RU topic, where new links and updates are usually posted
 - **Topic Cleanup** - Cleans forum title tags like `[Info]`, `[CRACKED]`, `[NOT CRACKED]`, build/update labels, and platform notes before searching Steam
 - **Base Game Matching** - Prefers base-game Steam results over DLC, upgrades, season passes, and store extras
-- **Smart Caching** - Persistent cache across sessions (24hr TTL), including media metadata, plus short failed-lookup caching
-- **Background Preloading** - Preloads game data when the tab is idle
+- **Field-Level Caching** - Persistent AppID data, independently refreshed tags/reviews, saved match corrections, and safe cross-tab merging
+- **Tags-First Preloading** - Configurable nearby/full-page warming, including bounded background-tab loading
 
 ## Installation
 
@@ -58,12 +62,12 @@ The script works on CS.RIN.RU forum pages:
 
 ## Technical Details
 
-- **API Used**: Steam Store API + Steam Store Page scraping
-- **Cache Duration**: 24 hours for successful Steam data / 15 minutes for failed lookups
-- **Rate Limiting**: 50ms minimum between API requests
-- **Preloading**: Concurrent fetching when tab is hidden
-- **Forum Filtering**: Only activates under the `Topics` section, skipping announcements and stickies
-- **Media Handling**: Stores normalized Steam screenshots/trailers in cache and reuses them across hover and theatre views
+- **Data**: Official keyless Steam review API, single-AppID storefront details/search, and Steam store-page tag parsing. No SteamDB scraping.
+- **Matching**: Confidence-checked base games, verified DLC parents, and persistent per-listing corrections.
+- **Cache**: Details/tags fresh for 24 hours; review freshness is 15 minutes for new/unknown/upcoming releases and 3 hours otherwise. Usable stale tags refresh in the background.
+- **Preload**: Nearby rows by default; Entire page and On hover only available in the userscript menu. Runnable hidden tabs warm serially; sleeping/discarded/closed tabs cannot run it.
+- **Development**: Shared source, reproducible standalone builds, dependency locks, lint/format, unit/browser tests, and CI. See [CONTRIBUTING](CONTRIBUTING.md).
+- **Action icons**: Bundled SVGs; see [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ## License
 

@@ -1,0 +1,565 @@
+{
+  "checkedAt": "2026-11-03T19:40:52.385Z",
+  "clientDate": "2026-11-04",
+  "release": {
+    "csrinru": "4.01",
+    "previousPublic": {
+      "url": "https://greasyfork.org/en/scripts/580613.json",
+      "status": 200,
+      "version": "4.00",
+      "code_url": "https://update.greasyfork.org/scripts/580613/CSRINRU%20-%20Steam%20Hover%20Preview.user.js",
+      "updated": "2026-11-03T18:54:48.000Z"
+    },
+    "consumer": "5.00",
+    "core": "1.0.6"
+  },
+  "changes": [
+    "CS.RIN Enhanced-compatible forum-tag colours",
+    "Locally bundled SteamDB logo in the CS.RIN AppID shortcut"
+  ],
+  "nodeTests": {
+    "csrinru": {
+      "passed": 71,
+      "failed": 0
+    },
+    "1337x": {
+      "passed": 65,
+      "failed": 0
+    }
+  },
+  "browser": {
+    "generatedAt": "2026-11-03T19:38:05.192Z",
+    "total": 60,
+    "passed": 60,
+    "failed": 0,
+    "checks": [
+      {
+        "name": "1337x: actual tags in first card, reviews independent, no speculative batch",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: saved actual tags survive page reload",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: a DLC resolves all fields and links to its verified base",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: repeated source listings reuse AppID details and actual tags",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: absent tags settle explicitly and retry fills the same card",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: rapid pointer changes cannot overwrite the next game",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: zero reviews is a visible state",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: failed reviews can be retried without resetting media",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: keyboard and theatre focus remain contained and restore",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: wrong-game correction survives reload",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: dynamic game descriptions cannot inject markup",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: preload starts after load and remains bounded when hidden",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: actual tags in first card, reviews independent, no speculative batch",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: saved actual tags survive page reload",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: a DLC resolves all fields and links to its verified base",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: repeated source listings reuse AppID details and actual tags",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: absent tags settle explicitly and retry fills the same card",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: rapid pointer changes cannot overwrite the next game",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: zero reviews is a visible state",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: failed reviews can be retried without resetting media",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: keyboard and theatre focus remain contained and restore",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: wrong-game correction survives reload",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: dynamic game descriptions cannot inject markup",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: preload starts after load and remains bounded when hidden",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: settings menu persists preload and theme preferences",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: settings menu persists preload and theme preferences",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: regression failure preview locks so its recovery controls are clickable",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: regression original typography and sizing with plain reviews and blue actions",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: regression failure preview locks so its recovery controls are clickable",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: regression original typography and sizing with plain reviews and blue actions",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: regression Windows icons work on uploader pages without a Games link or uploader column",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: localized English alias resolves through Steam website search after API miss",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: reported MeowPower exclamation title resolves despite literal-query API miss",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: reported Asgard raw title uses punctuation-neutral Steam lookup",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: bundled Fuse recovers a misspelled subtitle through a title-prefix candidate",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: failed lookup offers returned suggestions and switches to Wrong game after selection",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: ambiguous failures show choices directly without a Wrong game toggle",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: localized English alias resolves through Steam website search after API miss",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: reported MeowPower exclamation title resolves despite literal-query API miss",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: reported Asgard raw title uses punctuation-neutral Steam lookup",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: bundled Fuse recovers a misspelled subtitle through a title-prefix candidate",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: failed lookup offers returned suggestions and switches to Wrong game after selection",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: ambiguous failures show choices directly without a Wrong game toggle",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: manual chooser ranks names even across a rejected sequel identity",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: manual chooser ranks names even across a rejected sequel identity",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: typed chooser search suggests titles and waits for explicit selection",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: Enter searches a successful card without submitting the empty AppID form",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: new chooser text and closing the panel cancel obsolete searches",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: chooser search distinguishes empty results, provider failure and retry",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: typed chooser search suggests titles and waits for explicit selection",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: Enter searches a successful card without submitting the empty AppID form",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: new chooser text and closing the panel cancel obsolete searches",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: chooser search distinguishes empty results, provider failure and retry",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: protected torrent titles remain eligible",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: Enhanced tag colours follow source background, not card theme",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: copy Enhanced inline colours and refresh same-title cached rows",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: failed previews retain Enhanced VR tag colours and clickable chooser",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: game named Guide, AppID copy, and latest-post URL",
+        "status": "passed"
+      },
+      {
+        "name": "1337x: original pipeline controlled comparison",
+        "status": "passed"
+      },
+      {
+        "name": "csrinru: original pipeline controlled comparison",
+        "status": "passed"
+      }
+    ],
+    "environment": "Headless Chromium, local HTML fixtures and deterministic mocked Steam transport; not a live-network benchmark.",
+    "limitations": [
+      "Hidden-state logic is simulated; browser freezing/discarding is outside this harness.",
+      "Fixtures do not establish current live-site markup, CSP, script-manager, or media-codec compatibility.",
+      "The original baseline receives a valid legacy review response to isolate pipeline work from endpoint retirement."
+    ]
+  },
+  "checks": {
+    "lintBoth": "passed",
+    "buildBoth": "passed",
+    "generatedAndSyntaxBoth": "passed",
+    "formatBoth": "passed",
+    "sharedCoreSync": "passed"
+  },
+  "enhanced": {
+    "source": "https://github.com/SubZeroPL/cs-rin-ru-enhanced-mod/blob/master/cs-rin-ru-enhanced-mod.user.js",
+    "sourceVersion": "1.2.9",
+    "goldenCases": 21,
+    "sourceInlineColorPriority": true,
+    "background": "source title ancestor; fallback RGB 28,28,28",
+    "liveUpstreamComparison": {
+      "checkedAt": "2026-11-03T19:42:03.429Z",
+      "source": "https://raw.githubusercontent.com/SubZeroPL/cs-rin-ru-enhanced-mod/master/cs-rin-ru-enhanced-mod.user.js",
+      "sourceSha256": "0514204dfde17fd9b6eedcaf16e54d6c78e49665c9ef42760edf8d0094919868",
+      "method": "Execute the upstream hexToRgb/colorize function pair in an isolated VM and compare with the adapter on the same 21 inputs.",
+      "passed": 21,
+      "failed": 0,
+      "checks": [
+        {
+          "tag": "[CRACKED]",
+          "background": [
+            28,
+            28,
+            28
+          ],
+          "upstreamColor": "#e14564",
+          "adapterColor": "#e14564",
+          "passed": true
+        },
+        {
+          "tag": "[Early Access]",
+          "background": [
+            28,
+            28,
+            28
+          ],
+          "upstreamColor": "#b7ba6d",
+          "adapterColor": "#b7ba6d",
+          "passed": true
+        },
+        {
+          "tag": "[VR Optional]",
+          "background": [
+            28,
+            28,
+            28
+          ],
+          "upstreamColor": "#4ff2a6",
+          "adapterColor": "#4ff2a6",
+          "passed": true
+        },
+        {
+          "tag": "[NOT CRACKED / HYPERVISOR]",
+          "background": [
+            28,
+            28,
+            28
+          ],
+          "upstreamColor": "#4d77f4",
+          "adapterColor": "#4d77f4",
+          "passed": true
+        },
+        {
+          "tag": "[Linux]",
+          "background": [
+            28,
+            28,
+            28
+          ],
+          "upstreamColor": "#fe5dc2",
+          "adapterColor": "#fe5dc2",
+          "passed": true
+        },
+        {
+          "tag": "[测试]",
+          "background": [
+            28,
+            28,
+            28
+          ],
+          "upstreamColor": "#82cd32",
+          "adapterColor": "#82cd32",
+          "passed": true
+        },
+        {
+          "tag": "[🎮]",
+          "background": [
+            28,
+            28,
+            28
+          ],
+          "upstreamColor": "#dbf759",
+          "adapterColor": "#dbf759",
+          "passed": true
+        },
+        {
+          "tag": "[CRACKED]",
+          "background": [
+            32,
+            32,
+            32
+          ],
+          "upstreamColor": "#ba73cd",
+          "adapterColor": "#ba73cd",
+          "passed": true
+        },
+        {
+          "tag": "[Early Access]",
+          "background": [
+            32,
+            32,
+            32
+          ],
+          "upstreamColor": "#b7ba6d",
+          "adapterColor": "#b7ba6d",
+          "passed": true
+        },
+        {
+          "tag": "[VR Optional]",
+          "background": [
+            32,
+            32,
+            32
+          ],
+          "upstreamColor": "#4ff2a6",
+          "adapterColor": "#4ff2a6",
+          "passed": true
+        },
+        {
+          "tag": "[NOT CRACKED / HYPERVISOR]",
+          "background": [
+            32,
+            32,
+            32
+          ],
+          "upstreamColor": "#4d77f4",
+          "adapterColor": "#4d77f4",
+          "passed": true
+        },
+        {
+          "tag": "[Linux]",
+          "background": [
+            32,
+            32,
+            32
+          ],
+          "upstreamColor": "#fe5dc2",
+          "adapterColor": "#fe5dc2",
+          "passed": true
+        },
+        {
+          "tag": "[测试]",
+          "background": [
+            32,
+            32,
+            32
+          ],
+          "upstreamColor": "#57ecf3",
+          "adapterColor": "#57ecf3",
+          "passed": true
+        },
+        {
+          "tag": "[🎮]",
+          "background": [
+            32,
+            32,
+            32
+          ],
+          "upstreamColor": "#dbf759",
+          "adapterColor": "#dbf759",
+          "passed": true
+        },
+        {
+          "tag": "[CRACKED]",
+          "background": [
+            240,
+            240,
+            240
+          ],
+          "upstreamColor": "#e14564",
+          "adapterColor": "#e14564",
+          "passed": true
+        },
+        {
+          "tag": "[Early Access]",
+          "background": [
+            240,
+            240,
+            240
+          ],
+          "upstreamColor": "#595165",
+          "adapterColor": "#595165",
+          "passed": true
+        },
+        {
+          "tag": "[VR Optional]",
+          "background": [
+            240,
+            240,
+            240
+          ],
+          "upstreamColor": "#482e5b",
+          "adapterColor": "#482e5b",
+          "passed": true
+        },
+        {
+          "tag": "[NOT CRACKED / HYPERVISOR]",
+          "background": [
+            240,
+            240,
+            240
+          ],
+          "upstreamColor": "#f8464b",
+          "adapterColor": "#f8464b",
+          "passed": true
+        },
+        {
+          "tag": "[Linux]",
+          "background": [
+            240,
+            240,
+            240
+          ],
+          "upstreamColor": "#96cc0d",
+          "adapterColor": "#96cc0d",
+          "passed": true
+        },
+        {
+          "tag": "[测试]",
+          "background": [
+            240,
+            240,
+            240
+          ],
+          "upstreamColor": "#121c90",
+          "adapterColor": "#121c90",
+          "passed": true
+        },
+        {
+          "tag": "[🎮]",
+          "background": [
+            240,
+            240,
+            240
+          ],
+          "upstreamColor": "#1fac3b",
+          "adapterColor": "#1fac3b",
+          "passed": true
+        }
+      ]
+    }
+  },
+  "icon": {
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/521c96fd04b0ea93034db8715eda5a4de27a58bb/icons/steamdb.svg",
+    "revision": "521c96fd04b0ea93034db8715eda5a4de27a58bb",
+    "license": "CC0-1.0",
+    "sha256": "ab9dbd4a40f9557f238970c410a2c4ead3ba0ef20e3f39c5ddf6beba11e2438d",
+    "svg": "<svg role=\"img\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><title>SteamDB</title><path d=\"M11.981 0C5.72 0 .581 2.231.02 5.081l6.675 1.257c.544-.17 1.162-.244 1.8-.244l3.131-1.875c-.037-.469.244-.956.881-1.35.9-.581 2.307-.9 3.732-.9a8.582 8.582 0 012.812.412c2.1.713 2.569 2.082 1.069 3.057-.956.618-2.494.937-4.013.9l-4.125 1.48c-.037.3-.243.582-.637.845-1.106.712-3.263.88-4.8.356-.675-.225-1.125-.563-1.313-.9L.47 7.2c.431.675 1.125 1.294 2.025 1.838C.938 9.938 0 11.062 0 12.28c0 1.2.9 2.307 2.419 3.206C.9 16.37 0 17.476 0 18.675 0 21.619 5.363 24 12 24c6.619 0 12-2.381 12-5.325 0-1.2-.9-2.306-2.419-3.188C23.1 14.588 24 13.482 24 12.282c0-1.219-.938-2.362-2.512-3.262 1.556-.956 2.493-2.138 2.493-3.413 0-3.093-5.381-5.606-12-5.606zm4.275 2.663c-.975.018-1.912.225-2.512.618-1.031.675-.713 1.594.712 2.082 1.425.487 3.394.337 4.425-.338 1.032-.675.713-1.594-.712-2.062a6.376 6.376 0 00-1.913-.282zm.057.318c1.387 0 2.493.525 2.493 1.163 0 .637-1.106 1.162-2.493 1.162-1.388 0-2.494-.525-2.494-1.162 0-.638 1.106-1.163 2.494-1.163zM8.493 6.45c-.3.019-.58.038-.862.075l1.707.319a2.03.94 0 11-1.52 1.744l-1.668-.32c.188.17.45.32.806.45 1.2.413 2.888.282 3.75-.28.863-.563.6-1.35-.6-1.744-.487-.169-1.068-.244-1.612-.244zm11.944 3.113v1.743c0 2.063-3.787 3.732-8.437 3.732-4.669 0-8.437-1.67-8.437-3.732V9.581c2.156.994 5.137 1.613 8.418 1.613 3.3 0 6.3-.619 8.475-1.631zm0 6.487v1.65c0 2.063-3.787 3.731-8.437 3.731-4.669 0-8.437-1.668-8.437-3.731v-1.65c2.175.956 5.137 1.538 8.437 1.538s6.281-.582 8.438-1.538z\"/></svg>"
+  },
+  "artifacts": {
+    "csrinruSha256": "4344c5a0c2d306b06fd36f840e0dafdbb6436ca544e59b019bcdd67971b132a7",
+    "consumerSha256": "94d5bba224d3a769d08eb687fd849b0ccbafff46af4f57449d9a890818a4fd34",
+    "sharedLockSha256": "3b81d9b88622a449488e26377fe7a3471c174317759e30b884a5d46be0a196c2"
+  },
+  "unchangedConsumerReleaseMetadata": {
+    "src/userscript-header.txt": "b5f98c19572b86a17e1e75adf73769c13408af7becf0560b92dfe8907a0166ad",
+    "package.json": "c9d18f5e3d8d89fd163ed01e8f5af11b0855f6efcafc70b41d2eb1e58dda6ff2",
+    "package-lock.json": "f8fcd832197d7cd7be69e9d2f5138e4c1c798ebf100932f735afa7343ed11b66",
+    "CHANGELOG.md": "3f5d3603316f27bbb0c3578c1ee5175d70e0854f80cd3c9912398484d8071562",
+    "GREASYFORK_CHANGELOG.md": "db79fb4d37613aa3d59730818fb779bf4a9141c117388f29cd7a9f9d0b080a3e"
+  },
+  "manualValidation": "Real userscript-manager, logged-in forum and Dark Reader checks remain on RELEASE_CHECKLIST.md; no installation or publication performed.",
+  "screenshotVerification": {
+    "passed": 2,
+    "normal": "test-results/browser/csrinru-enhanced-source-and-preview.png",
+    "cacheMutation": "test-results/browser/csrinru-enhanced-inline-cache-test.png",
+    "note": "The blue #123456 colour is deliberately injected only after the normal red screenshot to test source-colour cache refresh."
+  }
+}

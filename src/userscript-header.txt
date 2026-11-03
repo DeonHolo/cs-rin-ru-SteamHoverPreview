@@ -1,0 +1,27 @@
+// ==UserScript==
+// @name         CS.RIN.RU - Steam Hover Preview
+// @namespace    https://greasyfork.org/en/users/1340389-deonholo
+// @version      4.01
+// @description  Actual Steam tags first, validated base-game matching, reviews, screenshots, trailers, and quick site actions
+// @author       DeonHolo
+// @license      MIT
+// @icon         https://raw.githubusercontent.com/SubZeroPL/cs-rin-ru-enhanced-mod/master/image.png
+// @iconURL      https://raw.githubusercontent.com/SubZeroPL/cs-rin-ru-enhanced-mod/master/image.png
+// @defaulticon  https://raw.githubusercontent.com/SubZeroPL/cs-rin-ru-enhanced-mod/master/image.png
+// @match        *://cs.rin.ru/forum/*
+// @match        *://*.cs.rin.ru/forum/*
+// @grant        GM_xmlhttpRequest
+// @grant        GM_addStyle
+// @grant        GM_getValue
+// @grant        GM_setValue
+// @grant        GM_registerMenuCommand
+// @grant        GM_addValueChangeListener
+// @grant        GM.getValue
+// @grant        GM.setValue
+// @grant        GM.xmlHttpRequest
+// @grant        GM.registerMenuCommand
+// @grant        GM.addValueChangeListener
+// @connect      api.steampowered.com
+// @connect      store.steampowered.com
+// @run-at       document-idle
+// ==/UserScript==
