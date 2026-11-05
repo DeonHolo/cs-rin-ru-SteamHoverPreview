@@ -14,18 +14,24 @@ import {
 } from '../tests/browser/fixtures.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const localSite = JSON.parse(await readFile(path.join(root, 'build.config.json'), 'utf8')).site;
 const output = path.join(root, 'test-results', 'browser');
 await mkdir(output, { recursive: true });
 const products = {
     '1337x': {
-        root: path.resolve(process.env.STEAM_HOVER_1337X_ROOT || path.join(root, '../1337x')),
+        root: path.resolve(
+            process.env.STEAM_HOVER_1337X_ROOT || (localSite === '1337x' ? root : path.join(root, '../1337x'))
+        ),
         file: '1337xSteamHoverPreview.js',
         url: 'https://1337x.to/Games/1/',
         baseline: '1337x.original.js',
         baselineRevision: 'a93528e'
     },
     csrinru: {
-        root,
+        root: path.resolve(
+            process.env.STEAM_HOVER_CSRINRU_ROOT ||
+                (localSite === 'csrinru' ? root : path.join(root, '../csrinruSteamHoverPreview'))
+        ),
         file: 'csrinruSteamHoverPreview.user.js',
         url: 'https://cs.rin.ru/forum/viewforum.php?f=10',
         baseline: 'csrinru.original.js',
