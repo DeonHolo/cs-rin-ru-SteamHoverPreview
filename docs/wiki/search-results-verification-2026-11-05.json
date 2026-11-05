@@ -1,0 +1,207 @@
+{
+  "checkedAt": "2026-11-05T04:18:25.508Z",
+  "clientDate": "2026-11-05",
+  "version": "4.04",
+  "previousPublic": "4.03",
+  "originalReportedVersion": "4.02",
+  "cause": "tablebg topic-search container missing from structural fallback; combined column header did not qualify as separate Topics section heading",
+  "sectionPolicy": "Only Topics and topic-search title rows; reject Global Announcements, Announcements, Stickies, pinned icons/classes, pagination and post references",
+  "liveObservations": {
+    "searchTable": "table.tablebg",
+    "titleClass": "topictitle",
+    "searchHeader": "Topics Author Replies Views Last post",
+    "globalHeading": "Global Announcements",
+    "globalIcons": [
+      "global_read.png",
+      "global_read_locked.png"
+    ],
+    "containsSessionData": false
+  },
+  "before": {
+    "version": "4.02",
+    "checks": [
+      {
+        "name": "csrinru: topic search tablebg rows preview highlighted titles and latest-page actions",
+        "status": "failed"
+      },
+      {
+        "name": "csrinru: topic search still ignores sticky, pagination and post-reference links",
+        "status": "passed"
+      }
+    ]
+  },
+  "after": {
+    "nodeTests": {
+      "passed": 71,
+      "failed": 0
+    },
+    "browser": {
+      "passed": 34,
+      "failed": 0,
+      "checks": [
+        {
+          "name": "csrinru: actual tags in first card, reviews independent, no speculative batch",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: saved actual tags survive page reload",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: a DLC resolves all fields and links to its verified base",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: repeated source listings reuse AppID details and actual tags",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: absent tags settle explicitly and retry fills the same card",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: rapid pointer changes cannot overwrite the next game",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: zero reviews is a visible state",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: failed reviews can be retried without resetting media",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: keyboard and theatre focus remain contained and restore",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: wrong-game correction survives reload",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: dynamic game descriptions cannot inject markup",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: preload starts after load and remains bounded when hidden",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: settings menu persists preload and theme preferences",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: regression failure preview locks so its recovery controls are clickable",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: regression original typography and sizing with plain reviews and blue actions",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: localized English alias resolves through Steam website search after API miss",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: reported MeowPower exclamation title resolves despite literal-query API miss",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: reported Asgard raw title uses punctuation-neutral Steam lookup",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: bundled Fuse recovers a misspelled subtitle through a title-prefix candidate",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: failed lookup offers returned suggestions and switches to Wrong game after selection",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: ambiguous failures show choices directly without a Wrong game toggle",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: manual chooser ranks names even across a rejected sequel identity",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: typed chooser search suggests titles and waits for explicit selection",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: Enter searches a successful card without submitting the empty AppID form",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: new chooser text and closing the panel cancel obsolete searches",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: chooser search distinguishes empty results, provider failure and retry",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: topic search tablebg rows preview highlighted titles and latest-page actions",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: only Topics section previews; all pinned sections and global icons stay excluded",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: topic search still ignores sticky, pagination and post-reference links",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: Enhanced tag colours follow source background, not card theme",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: copy Enhanced inline colours and refresh same-title cached rows",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: failed previews retain Enhanced VR tag colours and clickable chooser",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: game named Guide, AppID copy, and latest-post URL",
+          "status": "passed"
+        },
+        {
+          "name": "csrinru: title-row correction keeps footer actions at bottom for long titles",
+          "status": "passed"
+        }
+      ],
+      "limitations": [
+        "Hidden-state logic is simulated; browser freezing/discarding is outside this harness.",
+        "Fixtures do not establish current live-site markup, CSP, script-manager, or media-codec compatibility.",
+        "The original baseline receives a valid legacy review response to isolate pipeline work from endpoint retirement."
+      ]
+    },
+    "checks": [
+      "lint",
+      "build",
+      "generated/syntax",
+      "format:check",
+      "shared lock verification"
+    ]
+  },
+  "artifacts": {
+    "csrinruSha256": "73603b6b5863c7a9ad6c20f66964b5b60ed555b7918e05964119ff3dcc9254a6",
+    "consumerSha256": "7df14aa770cd8c59a2cc5a6b7a5639c6ded4f3ab5ffb1b8c9c4d36ebc029ed44",
+    "consumerVersion": "5.01",
+    "consumerUnchanged": true,
+    "core": "1.0.7"
+  },
+  "publication": {
+    "version": "4.04",
+    "verifiedAt": "2026-11-05T04:19:15.785Z",
+    "url": "https://greasyfork.org/en/scripts/580613-cs-rin-ru-steam-hover-preview/versions",
+    "method": "In-app browser; public version and rendered Markdown history verified"
+  },
+  "manualCheck": "Automated browser uses sanitized observed markup and mocked Steam transport; installation in the user’s actual browser/userscript manager remains to be checked."
+}

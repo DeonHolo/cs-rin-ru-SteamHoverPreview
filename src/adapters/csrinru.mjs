@@ -120,10 +120,16 @@ export function createCsrinruAdapter({ window: win, document: doc, cleanTitle, s
         'a.topictitle, .topiclist a[href*="viewtopic.php"][href*="t="], table.forumline a[href*="viewtopic.php"][href*="t="]';
     const rows = new WeakMap();
     const sectionType = (text) => {
-        const s = text.replace(/\s+/g, ' ').trim().toLowerCase();
+        const s = text
+            .replace(/\s+/g, ' ')
+            .trim()
+            .replace(/^:+\s*|\s*:+$/g, '')
+            .toLowerCase();
         if (/^(?:topics|темы|sujets|themen)$/.test(s)) return 'topics';
         if (
-            /^(?:announcements|объявления|annonces|ankündigungen|stickies|важные темы|важные|épinglés|wichtig)$/.test(s)
+            /^(?:(?:global\s+)?announcements|объявления|annonces|ankündigungen|stickies|важные темы|важные|épinglés|wichtig)$/.test(
+                s
+            )
         )
             return 'pinned';
         return null;
@@ -133,7 +139,7 @@ export function createCsrinruAdapter({ window: win, document: doc, cleanTitle, s
             row.matches(
                 '[data-topic-type="sticky"], [data-topic-type="announcement"], .sticky, .announcement, .global-announce, .topic_sticky, .topic_announce'
             ) ||
-            row.querySelector('img[src*="sticky"], img[src*="announce"]')
+            row.querySelector('img[src*="sticky"], img[src*="announce"], img[src*="/global_"]')
         )
             return false;
         let prior = row.previousElementSibling;
@@ -142,10 +148,12 @@ export function createCsrinruAdapter({ window: win, document: doc, cleanTitle, s
             if (section) return section === 'topics';
             prior = prior.previousElementSibling;
         }
-        // A structural topic-title row is accepted without requiring an English heading.
+        // Search results use tablebg with a Topics/Author/etc. column header,
+        // rather than the separate section heading used by forum listings.
+        // Still require a topic-title link; pagination and post links are not titles.
         return (
             link.matches('a.topictitle') &&
-            Boolean(row.closest('table.forumline, .topiclist, .forumbg, [data-topic-list]'))
+            Boolean(row.closest('table.forumline, table.tablebg, .topiclist, .forumbg, [data-topic-list]'))
         );
     }
     function getSource(link) {

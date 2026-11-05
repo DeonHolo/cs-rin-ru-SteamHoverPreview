@@ -1,4 +1,4 @@
-## 4.01
+## 4.05
 
-- Restore forum-tag colours to match CS.RIN.RU Enhanced, including CRACKED, Early Access and VR Optional, in matched and failed previews.
-- Replace the SteamDB shortcut’s external-link arrow with a small SteamDB logo beside the AppID.
+- Recognize Disco Elysium as Disco Elysium – The Final Cut using its verified Steam identity.
+- Improve edition matching so Skyrim Special Edition matches directly while original Skyrim, Special Edition and VR stay separate.

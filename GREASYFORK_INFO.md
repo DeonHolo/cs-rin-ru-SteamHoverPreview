@@ -6,8 +6,8 @@
 
 <center>
   <img
-    src="https://i.imgur.com/LdBNWBS.png"
-    alt="Hover preview demo"
+    src="https://i.imgur.com/7FMGGp6.png?fb"
+    alt="Disco Elysium - The Final Cut preview on CS.RIN.RU"
     style="max-width:100%; margin:8px 0;"
   />
 </center>

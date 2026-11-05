@@ -1,13 +1,39 @@
 # Changelog
 
-## 4.01 — Unreleased
+## 4.05
+
+Changes since public version 4.04.
+
+- Recognize Disco Elysium as Disco Elysium – The Final Cut using its verified Steam identity.
+- Improve edition matching so Skyrim Special Edition matches directly while original Skyrim, Special Edition and VR stay separate.
+
+## 4.04
+
+Changes since public version 4.03.
+
+- Keep hover previews restricted to Topics and topic-search results; explicitly exclude Global Announcements, Announcements and Stickies.
+
+## 4.03
+
+Changes since public version 4.02.
+
+- Restore Steam hover previews on forum topic search results, including highlighted game titles.
+
+## 4.02
+
+Changes since public version 4.01.
+
+- Move Wrong game? to the right of the game title, keeping Open on Steam at the bottom-left.
+- Allow long game titles to wrap beside the correction button, including on narrow screens.
+
+## 4.01
 
 Changes since public version 4.00.
 
 - Restore forum-tag colours to match CS.RIN.RU Enhanced, including CRACKED, Early Access and VR Optional, in matched and failed previews.
 - Replace the SteamDB shortcut’s external-link arrow with a small SteamDB logo beside the AppID.
 
-## 4.00 — 4 November 2026
+## 4.00
 
 Changes since public version 3.2.
 

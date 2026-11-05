@@ -4,15 +4,15 @@ A userscript that displays Steam game information when hovering over game topic 
 
 <center>
   <img
-    src="https://i.imgur.com/LdBNWBS.png"
-    alt="Hover preview demo"
+    src="docs/images/steam-hover-preview.png"
+    alt="Disco Elysium - The Final Cut preview on CS.RIN.RU"
     style="max-width:100%; margin:8px 0;"
   />
 </center>
 
 ## Wiki and Code Review
 
-The [project wiki](docs/wiki/Home.md) covers behavior and architecture. The current **unpublished 4.01 patch** restores [Enhanced tag colours and adds a SteamDB logo](docs/wiki/Enhanced-Tag-Colors.md). It retains [title search inside the chooser](docs/wiki/Search-by-Name.md), plus [matching fixes and a plain-language explanation](docs/wiki/Matching-Explained.md). Use the [Markdown release checklist](RELEASE_CHECKLIST.md) and [paste-ready Greasy Fork changelog](GREASYFORK_CHANGELOG.md) to review this release. Older patch labels in dated test reports are internal development snapshots, not public releases.
+The [project wiki](docs/wiki/Home.md) covers behavior and architecture. Version **4.05** recognizes Disco Elysium's verified rename and repairs Skyrim Special Edition matching while preserving distinct editions. See [title identity and aliases](docs/wiki/Title-Identity-and-Aliases.md) for the explanation, [match recovery](docs/wiki/Match-Recovery.md) for manual corrections, and the [release checklist](RELEASE_CHECKLIST.md) and [Greasy Fork Markdown notes](GREASYFORK_CHANGELOG.md) for this release. Dated verification reports record the specific builds tested.
 
 ## Features
 
