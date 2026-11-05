@@ -1,6 +1,6 @@
 # CS.RIN.RU Steam Hover Preview wiki
 
-Current public version **4.06**, shared core **1.0.9**. Install the standalone [csrinruSteamHoverPreview.user.js](../../csrinruSteamHoverPreview.user.js) with a userscript manager; source modules and Node packages are development-only.
+The public CS.RIN.RU version **4.06** uses shared core **1.0.9**. This repository also supplies core **1.0.10** to 1337x for its release annotation fix. [CS.RIN.RU userscript on Greasy Fork](https://greasyfork.org/en/scripts/580613-cs-rin-ru-steam-hover-preview)
 
 - [Search-results fix and Topics-only safeguards](Search-Results-Fix.md)
 - [4.01: Enhanced tag colours and SteamDB logo](Enhanced-Tag-Colors.md)

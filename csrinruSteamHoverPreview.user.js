@@ -26,8 +26,8 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-// Generated from source; edit src/ and rebuild. Shared core 1.0.9.
-// Build SHA-256: e38bc86ba93beb4796755faa082ac459209ea5bafcab76478d5dcd05ecea3262
+// Generated from source; edit src/ and rebuild. Shared core 1.0.10.
+// Build SHA-256: 0c7c5b9406d1815b86ee967b6ece1fe01a258b406fbef490b0fe5c0d4e100768
 (() => {
 'use strict';
 
@@ -252,7 +252,7 @@ return re;
 
 // Source: src/core/steam-client.mjs
 /** Shared Steam providers, matching, request scheduling and field-level cache. No runtime dependencies. */
-const CORE_VERSION = '1.0.9';
+const CORE_VERSION = '1.0.10';
 
 const STEAM_SCHEMA = 3;
 const STEAM_RESOLVER = 9;
@@ -407,6 +407,10 @@ function cleanTorrentTitle(raw) {
         /\[[^\]]*\b(?:repack|fitgirl|dodi|elamigos|gog|multi\d*|p2p|iso|linux|windows|x64|x86)\b[^\]]*\]/gi,
         ' '
     );
+    // Listings can end midway through a release tag. Strip only recognized trailing metadata.
+    title = title
+        .replace(/\[\s*(?:fitgirl|dodi|elamigos|repack|bober\s*bros|gog|p2p|multi\d+|x64|x86)\b[^[\]]*$/i, ' ')
+        .replace(/\(\s*(?:v\d+(?=[.\s+…-]|$)|build\s*[#:]?\s*\d+|multi\d+)[^()]*$/i, ' ');
     title = steamCleanCommonTitle(title);
     title = title.replace(
         /\s*[- ]\s*(?:codex|cpy|skidrow|plaza|hoodlum|flt|doge|darksiders|empress|rune|tenoke|tinyiso|elamigos|fitgirl|dodi|razor1911|reloaded|prophet|fairlight|gog|p2p|steam|steamworks|3dm|ali213|anomaly|kaos|revolt|simplex|iso|bober\s*bros)\s*$/i,
