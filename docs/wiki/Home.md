@@ -1,6 +1,6 @@
 # CS.RIN.RU Steam Hover Preview wiki
 
-Current public version **4.05**, shared core **1.0.8**. Install the standalone [csrinruSteamHoverPreview.user.js](../../csrinruSteamHoverPreview.user.js) with a userscript manager; source modules and Node packages are development-only.
+Current public version **4.06**, shared core **1.0.9**. Install the standalone [csrinruSteamHoverPreview.user.js](../../csrinruSteamHoverPreview.user.js) with a userscript manager; source modules and Node packages are development-only.
 
 - [Search-results fix and Topics-only safeguards](Search-Results-Fix.md)
 - [4.01: Enhanced tag colours and SteamDB logo](Enhanced-Tag-Colors.md)
@@ -17,7 +17,7 @@ Current public version **4.05**, shared core **1.0.8**. Install the standalone [
 - [Historical audit](Review-Findings-2026-11-03.md)
 - [Development commands](../../CONTRIBUTING.md)
 
-[Title identity and verified aliases](Title-Identity-and-Aliases.md) explains the Disco Elysium and Skyrim matching fixes.
+[General title matching](General-Matching.md) explains the naming rules, broader retrieval, source-link recovery and remaining limits.
 
 ## What appears on hover
 
@@ -45,4 +45,4 @@ Use the manager menu for settings, Clear cached Steam data, match correction imp
 
 Eligibility accepts normal topic listings and tablebg topic-search results, including highlighted title spans. Global Announcements, Announcements, Stickies, pagination and post-reference links remain excluded. Latest-page links are same-origin and use topic/post evidence. A changed forum layout or CSP may require an adapter update.
 
-Topics-only eligibility continues to exclude Global Announcements by heading and icon. See [current matching verification](title-identity-verification.json) for the published build and tested scope.
+Topics-only eligibility continues to exclude Global Announcements by heading and icon. See [current matching verification](general-matching-verification.json) for the published build and tested scope.
