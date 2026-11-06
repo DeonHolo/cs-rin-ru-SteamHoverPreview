@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CS.RIN.RU - Steam Hover Preview
 // @namespace    https://greasyfork.org/en/users/1340389-deonholo
-// @version      4.08
+// @version      4.09
 // @description  Actual Steam tags first, validated base-game matching, reviews, screenshots, trailers, and quick site actions
 // @author       DeonHolo
 // @license      MIT
@@ -26,8 +26,8 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-// Generated from source; edit src/ and rebuild. Shared core 1.0.12.
-// Build SHA-256: b38492b262f0838402d887ee996f89b1b0ff6ffc9562082fd871a11d36b5b5b4
+// Generated from source; edit src/ and rebuild. Shared core 1.0.13.
+// Build SHA-256: d561c00c9afb78cdc24d28f0f9999e731b1eab94c04083d4a2a9e8004c5835e5
 (() => {
 'use strict';
 
@@ -252,7 +252,7 @@ return re;
 
 // Source: src/core/steam-client.mjs
 /** Shared Steam providers, matching, request scheduling and field-level cache. No runtime dependencies. */
-const CORE_VERSION = '1.0.12';
+const CORE_VERSION = '1.0.13';
 
 const STEAM_SCHEMA = 3;
 const STEAM_RESOLVER = 11;
@@ -2541,8 +2541,9 @@ function previewReviewsMarkup(data) {
         return '<span>Reviews unavailable</span> <button type="button" class="steamMetadataRetry" data-retry="reviews">Retry reviews</button>';
     const count = total.toLocaleString('en-US');
     const percent = review.percent == null ? NaN : Number(review.percent);
+    const hasPercent = Number.isFinite(percent) && percent >= 0 && percent <= 100;
     let stars = '';
-    if (Number.isFinite(percent) && percent >= 0 && percent <= 100) {
+    if (hasPercent) {
         const filled =
             percent >= 95 ? 5 : percent >= 80 ? 4 : percent >= 70 ? 3 : percent >= 40 ? 2 : percent >= 20 ? 1 : 0;
         stars =
@@ -2559,6 +2560,7 @@ function previewReviewsMarkup(data) {
         '<strong>Rating:</strong> ' +
         stars +
         '<span class="ratingText">' +
+        (hasPercent ? Math.round(percent) + '% positive  |  ' : '') +
         desc +
         count +
         ' ' +
@@ -2962,10 +2964,10 @@ function mountSteamHoverPreview({
             letter-spacing: 1px;
             font-size: 14px;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: baseline;
         }
         .steamHoverPreview .ratingText {
-            vertical-align: middle;
+            vertical-align: baseline;
         }
         .steamHoverPreview .loadingContainer {
             display: flex;

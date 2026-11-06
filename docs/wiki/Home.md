@@ -1,6 +1,6 @@
 # CS.RIN.RU Steam Hover Preview wiki
 
-Version **4.08** uses shared core **1.0.12**. See [edition and included-extra matching](Edition-and-Extras-Matching.md).
+Version **4.09** uses shared core **1.0.13**. See [rating display and alignment](Rating-Display.md).
 
 
 - [Search-results fix and Topics-only safeguards](Search-Results-Fix.md)

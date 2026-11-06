@@ -1,4 +1,4 @@
-## 4.08
+## 4.09
 
-- Match commercial editions followed by included DLCs, soundtracks or bonuses, including stacked packaging labels.
-- Preserve meaningful trailing subtitles when removing edition labels.
+- Show the positive review percentage beside the stars, Steam rating label and review count.
+- Align the rating label, stars and review text on the same baseline.
