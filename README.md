@@ -5,7 +5,7 @@ A userscript that displays Steam game information when hovering over game topic 
 <center>
   <img
     src="docs/images/steam-hover-preview.png"
-    alt="Disco Elysium - The Final Cut preview on CS.RIN.RU"
+    alt="Skyrim Special Edition preview on CS.RIN.RU"
     style="max-width:100%; margin:8px 0;"
   />
 </center>

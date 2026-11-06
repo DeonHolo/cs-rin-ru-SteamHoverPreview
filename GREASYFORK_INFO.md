@@ -1,7 +1,7 @@
 <p>Hover over a game topic on CS.RIN.RU to see its Steam information without leaving the forum list or search results.</p>
 
 <center>
-  <img src="https://i.imgur.com/HITmmEL.png" alt="Disco Elysium - The Final Cut preview on CS.RIN.RU" style="max-width:100%; margin:8px 0;" />
+  <img src="https://i.imgur.com/ubNOaD3.png" alt="Skyrim Special Edition preview on CS.RIN.RU" style="max-width:100%; margin:8px 0;" />
 </center>
 
 <h2>Features</h2>
