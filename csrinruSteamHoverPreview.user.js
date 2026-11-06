@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CS.RIN.RU - Steam Hover Preview
 // @namespace    https://greasyfork.org/en/users/1340389-deonholo
-// @version      4.09
+// @version      4.10
 // @description  Actual Steam tags first, validated base-game matching, reviews, screenshots, trailers, and quick site actions
 // @author       DeonHolo
 // @license      MIT
@@ -26,8 +26,8 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-// Generated from source; edit src/ and rebuild. Shared core 1.0.13.
-// Build SHA-256: d561c00c9afb78cdc24d28f0f9999e731b1eab94c04083d4a2a9e8004c5835e5
+// Generated from source; edit src/ and rebuild. Shared core 1.0.14.
+// Build SHA-256: a37488bfa0ca3894787d2f3846c541d4ede79b874cddfb0c03b6d2f8c5ed27c5
 (() => {
 'use strict';
 
@@ -252,7 +252,7 @@ return re;
 
 // Source: src/core/steam-client.mjs
 /** Shared Steam providers, matching, request scheduling and field-level cache. No runtime dependencies. */
-const CORE_VERSION = '1.0.13';
+const CORE_VERSION = '1.0.14';
 
 const STEAM_SCHEMA = 3;
 const STEAM_RESOLVER = 11;
@@ -2560,7 +2560,7 @@ function previewReviewsMarkup(data) {
         '<strong>Rating:</strong> ' +
         stars +
         '<span class="ratingText">' +
-        (hasPercent ? Math.round(percent) + '% positive  |  ' : '') +
+        (hasPercent ? Math.round(percent) + '% ' : '') +
         desc +
         count +
         ' ' +

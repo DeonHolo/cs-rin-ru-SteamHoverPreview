@@ -1,6 +1,6 @@
 # CS.RIN.RU Steam Hover Preview wiki
 
-Version **4.09** uses shared core **1.0.13**. See [rating display and alignment](Rating-Display.md).
+Version **4.10** uses shared core **1.0.14**. See [rating display and alignment](Rating-Display.md).
 
 
 - [Search-results fix and Topics-only safeguards](Search-Results-Fix.md)
@@ -22,7 +22,7 @@ Version **4.09** uses shared core **1.0.13**. See [rating display and alignment]
 
 ## What appears on hover
 
-The first meaningful successful card contains actual Steam tags. There is no genre fallback. A truly cold game shows a compact loading state; unavailable tags settle explicitly with Retry tags. Reviews update independently, in the original plain Rating row (stars, Steam category and count) or a clear zero/error state; the review summary is not a link. Images and trailers do not hold back tags.
+The first meaningful successful card contains actual Steam tags. There is no genre fallback. A truly cold game shows a compact loading state; unavailable tags settle explicitly with Retry tags. Reviews update independently, in the original plain Rating row (stars, positive percentage, Steam category and count) or a clear zero/error state; the review summary is not a link. Images and trailers do not hold back tags.
 
 Use the media arrows/thumbnails, click a trailer to start playback, and expand screenshots/trailers into theatre. Screenshot theatre stays within screenshots; after leaving a launched trailer for screenshots, navigation remains within screenshots. Escape closes theatre and restores its trigger. Alt+ArrowDown enters a keyboard-opened preview.
 

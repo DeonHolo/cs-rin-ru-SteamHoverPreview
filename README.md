@@ -12,7 +12,7 @@ A userscript that displays Steam game information when hovering over game topic 
 
 ## Wiki and Code Review
 
-The [project wiki](docs/wiki/Home.md) covers behavior and architecture. Version **4.06** improves matching across naming formats and spelling errors, and recovers failed names from source-content Steam links. See [general matching](docs/wiki/General-Matching.md) for the rules, scope and verification, [match recovery](docs/wiki/Match-Recovery.md) for manual choices, and the [release checklist](RELEASE_CHECKLIST.md) and [Greasy Fork Markdown notes](GREASYFORK_CHANGELOG.md).
+Version **4.10** groups the review percentage with Steam's category in a shorter rating row. The [project wiki](docs/wiki/Home.md) covers behavior and architecture. See the [release checklist](RELEASE_CHECKLIST.md) and [Greasy Fork Markdown notes](GREASYFORK_CHANGELOG.md).
 
 ## Features
 
@@ -21,7 +21,7 @@ The [project wiki](docs/wiki/Home.md) covers behavior and architecture. Version 
 - **Theatre Mode** - Open screenshots and trailers in a larger Steam-style media viewer with navigation, video controls, and fullscreen support
 - **Theatre Footer Actions** - Open the Steam page or the CS.RIN.RU topic's latest page directly from theatre mode
 - **Description** - Short game description from Steam
-- **Steam Reviews** - Original plain Rating row with stars, Steam category and actual review count, plus distinct zero/error states
+- **Steam Reviews** - Plain Rating row with stars, positive percentage, Steam category and actual review count, plus distinct zero/error states
 - **Actual Steam Tags First** - Real Steam tags in the first meaningful preview, with no genre substitution
 - **Release Date** - Game release information
 - **AppID Utility** - Click the Steam AppID to copy it, or use the compact external link to open SteamDB

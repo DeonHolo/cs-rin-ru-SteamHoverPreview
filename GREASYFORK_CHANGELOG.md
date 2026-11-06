@@ -1,4 +1,3 @@
-## 4.09
+## 4.10
 
-- Show the positive review percentage beside the stars, Steam rating label and review count.
-- Align the rating label, stars and review text on the same baseline.
+- Shorten the review row by grouping the percentage with Steam's rating label, for example: 94% Very Positive | 58,296 reviews.
