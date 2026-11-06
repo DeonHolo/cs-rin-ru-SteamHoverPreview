@@ -1,14 +1,11 @@
-# CS.RIN.RU 4.06 release checklist
+# 4.07 release checklist
 
-Changes since public 4.05. [Greasy Fork Markdown notes](GREASYFORK_CHANGELOG.md). Version-only public headings.
+Changes since public 4.06.
 
-- [x] Replace the per-game alias with general naming/typo/format rules in the canonical shared core.
-- [x] Add bounded source-content recovery and preserve ambiguity, app-type, DLC-parent and late-response guards.
-- [x] Cover unrelated Steam titles, unseen name stems, negative pairs and source-specific failures.
-- [x] Run lint, Node tests, build, generated-output and formatting checks for both products.
-- [x] Pass both browser adapters and real Steam endpoint probes.
-- [x] Publish rebuilt userscripts and Markdown notes; verify public versions.
+- [x] General package-label and verified DLC matching rules shared by both scripts.
+- [x] Preserve sequel, standalone-edition and ambiguity safeguards.
+- [x] Pass 288 unit tests and 88 browser checks across both sites; verify all five reported cases against live Steam with actual tags.
+- [x] Rebuild and check generated userscript and package version.
+- [x] Publish on Greasy Fork with version-only Markdown notes.
 
-[Matching guide](docs/wiki/General-Matching.md) · [Verification](docs/wiki/general-matching-verification.json).
-
-GitHub CI verifies each pushed build on the default branch.
+[Matching details](docs/wiki/Package-and-DLC-Matching.md)

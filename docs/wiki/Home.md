@@ -1,6 +1,6 @@
 # CS.RIN.RU Steam Hover Preview wiki
 
-The public CS.RIN.RU version **4.06** uses shared core **1.0.9**. This repository also supplies core **1.0.10** to 1337x for its release annotation fix. [CS.RIN.RU userscript on Greasy Fork](https://greasyfork.org/en/scripts/580613-cs-rin-ru-steam-hover-preview)
+Version **4.07** uses shared core **1.0.11**. See [package and DLC naming fixes](Package-and-DLC-Matching.md).
 
 - [Search-results fix and Topics-only safeguards](Search-Results-Fix.md)
 - [4.01: Enhanced tag colours and SteamDB logo](Enhanced-Tag-Colors.md)

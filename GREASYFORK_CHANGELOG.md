@@ -1,5 +1,5 @@
-## 4.06
+## 4.07
 
-- Improve matching across game titles with cut/edition labels, joined words, punctuation and minor spelling errors.
-- Recover renamed or localized games from a Steam link in the topic's first post when name matching fails; offer choices when several games are linked.
-- Reduce false matches with demos, prologues and similarly named games.
+- Improve matching for commercial bundles and numbered anniversary packages while preserving standalone editions.
+- Handle partially clipped repack tags after version notes.
+- Recognize DLC product descriptions and follow verified Steam parents to the base game.
