@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CS.RIN.RU - Steam Hover Preview
 // @namespace    https://greasyfork.org/en/users/1340389-deonholo
-// @version      4.07
+// @version      4.08
 // @description  Actual Steam tags first, validated base-game matching, reviews, screenshots, trailers, and quick site actions
 // @author       DeonHolo
 // @license      MIT
@@ -26,8 +26,8 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-// Generated from source; edit src/ and rebuild. Shared core 1.0.11.
-// Build SHA-256: 71fa42528b328865178c7d642fc9031113fef74886b823d862a9563ccc14efbb
+// Generated from source; edit src/ and rebuild. Shared core 1.0.12.
+// Build SHA-256: b38492b262f0838402d887ee996f89b1b0ff6ffc9562082fd871a11d36b5b5b4
 (() => {
 'use strict';
 
@@ -252,10 +252,10 @@ return re;
 
 // Source: src/core/steam-client.mjs
 /** Shared Steam providers, matching, request scheduling and field-level cache. No runtime dependencies. */
-const CORE_VERSION = '1.0.11';
+const CORE_VERSION = '1.0.12';
 
 const STEAM_SCHEMA = 3;
-const STEAM_RESOLVER = 10;
+const STEAM_RESOLVER = 11;
 const STEAM_PROVIDER = 2;
 const STEAM_DAY = 86400000;
 const STEAM_LANGUAGE = 'english';
@@ -319,7 +319,7 @@ function steamStripCommercialEdition(value) {
     if (soundtrackBundle) return soundtrackBundle[1].trim();
     const standard = title
         .replace(
-            /\s*[:\-–—]?\s+(?:(?:digital\s+)?deluxe|ultimate|gold|premium|complete|collector['’]?s|game\s+of\s+the\s+year|goty)\s+(?:edition|bundle)(?:\s*[:\-].*)?$/i,
+            /\s*[:\-–—]?\s+(?:(?:digital\s+)?deluxe|ultimate|gold|premium|complete|collector['’]?s|game\s+of\s+the\s+year|goty)\s+(?:edition|bundle)$/i,
             ''
         )
         .trim();
@@ -333,9 +333,31 @@ function steamStripCommercialEdition(value) {
         : title;
 }
 
+function steamStripIncludedExtra(value) {
+    // Require an explicit join/including marker and a complete metadata component.
+    // Keep names such as DLC Quest, C++ DLC and named expansions intact.
+    return String(value)
+        .replace(
+            /(?:\s*(?<![+&])[+&](?![+&])\s*|\s+(?:incl\.?|including)\s+)(?:(?:(?:all|\d+)\s*)?dlcs?(?:\s*\/\s*(?:bonuses|extras))?|(?:original\s+|digital\s+)?soundtrack|ost|(?:digital\s+)?artbook|bonus(?:es|\s+content)?|extras?)\s*[.…]*$/i,
+            ''
+        )
+        .trim();
+}
+
+function steamStripPackaging(value) {
+    let title = String(value).trim();
+    // Components compose in either order. Never remove arbitrary subtitle words.
+    for (let pass = 0; pass < 16; pass++) {
+        const next = steamStripCommercialEdition(steamStripIncludedExtra(title));
+        if (!next || next === title) break;
+        title = next;
+    }
+    return title;
+}
+
 function steamTitleQueries(value) {
     const title = String(value).trim();
-    const primary = steamStripCommercialEdition(title);
+    const primary = steamStripPackaging(title);
     const variants = [];
     if (/\benhanced\s+remaster\b/i.test(primary) && /\b4k\s*[/ ]\s*hd\s+edition\b/i.test(primary)) {
         variants.push(
@@ -547,7 +569,7 @@ function steamPresentationTitle(value) {
 }
 
 function steamIdentity(value) {
-    const title = steamComparisonText(steamStripCommercialEdition(value));
+    const title = steamComparisonText(steamStripPackaging(value));
     const normalized = normalizeForMatch(title).replace(/\s+dlc$/i, '');
     const tokens = normalized
         .split(' ')

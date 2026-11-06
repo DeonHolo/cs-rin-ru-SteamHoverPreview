@@ -1,6 +1,7 @@
 # CS.RIN.RU Steam Hover Preview wiki
 
-Version **4.07** uses shared core **1.0.11**. See [package and DLC naming fixes](Package-and-DLC-Matching.md).
+Version **4.08** uses shared core **1.0.12**. See [edition and included-extra matching](Edition-and-Extras-Matching.md).
+
 
 - [Search-results fix and Topics-only safeguards](Search-Results-Fix.md)
 - [4.01: Enhanced tag colours and SteamDB logo](Enhanced-Tag-Colors.md)
