@@ -1,6 +1,6 @@
 # CS.RIN.RU Steam Hover Preview wiki
 
-Version **4.10** uses shared core **1.0.14**. See [rating display and alignment](Rating-Display.md).
+Version **4.11** uses shared core **1.0.15** to [keep the chooser open while moving to it](Match-Recovery.md). See [rating display and alignment](Rating-Display.md).
 
 
 - [Search-results fix and Topics-only safeguards](Search-Results-Fix.md)

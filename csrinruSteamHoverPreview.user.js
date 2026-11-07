@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CS.RIN.RU - Steam Hover Preview
 // @namespace    https://greasyfork.org/en/users/1340389-deonholo
-// @version      4.10
+// @version      4.11
 // @description  Actual Steam tags first, validated base-game matching, reviews, screenshots, trailers, and quick site actions
 // @author       DeonHolo
 // @license      MIT
@@ -26,8 +26,8 @@
 // @run-at       document-idle
 // ==/UserScript==
 
-// Generated from source; edit src/ and rebuild. Shared core 1.0.14.
-// Build SHA-256: a37488bfa0ca3894787d2f3846c541d4ede79b874cddfb0c03b6d2f8c5ed27c5
+// Generated from source; edit src/ and rebuild. Shared core 1.0.15.
+// Build SHA-256: 69895b49945c30393ef8faf507f3e2133cc3fba298e494cd3c8c9502fdc3b806
 (() => {
 'use strict';
 
@@ -252,7 +252,7 @@ return re;
 
 // Source: src/core/steam-client.mjs
 /** Shared Steam providers, matching, request scheduling and field-level cache. No runtime dependencies. */
-const CORE_VERSION = '1.0.14';
+const CORE_VERSION = '1.0.15';
 
 const STEAM_SCHEMA = 3;
 const STEAM_RESOLVER = 11;
@@ -3602,7 +3602,12 @@ function mountSteamHoverPreview({
         }
     }
 
+    function isCorrectionOpen() {
+        return tip.style.display === 'block' && Boolean(tip.querySelector('.steamCorrection:not([hidden])'));
+    }
+
     function queueShow(link, event) {
+        if (isCorrectionOpen()) return;
         const source = adapter.getSource(link);
         if (!source) return;
         cancel(hideTimeout);
@@ -3669,6 +3674,7 @@ function mountSteamHoverPreview({
         hideTimeout = schedule(() => {
             if (
                 isTheatreOpen() ||
+                isCorrectionOpen() ||
                 tip.matches(':hover') ||
                 currentHoveredLink?.matches(':hover') ||
                 tip.contains(document.activeElement) ||
@@ -3733,6 +3739,9 @@ function mountSteamHoverPreview({
         const panel = tip.querySelector('.steamCorrection');
         if (!panel || !currentSource) return;
         cancelNameSearch();
+        cancel(showTimeout);
+        cancel(hideTimeout);
+        trackingMove = false;
         const candidates = currentError?.candidates || currentData?.match?.candidates || [];
         panel.hidden = false;
         panel.setAttribute('role', 'group');
@@ -4744,6 +4753,14 @@ function mountSteamHoverPreview({
             updateTheatreVideoControls(video);
         }
     });
+    listen(
+        document,
+        'pointerdown',
+        (event) => {
+            if (isCorrectionOpen() && !tip.contains(event.target)) hide();
+        },
+        true
+    );
     listen(
         document,
         'mouseover',

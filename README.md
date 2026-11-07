@@ -12,7 +12,7 @@ A userscript that displays Steam game information when hovering over game topic 
 
 ## Wiki and Code Review
 
-Version **4.10** groups the review percentage with Steam's category in a shorter rating row. The [project wiki](docs/wiki/Home.md) covers behavior and architecture. See the [release checklist](RELEASE_CHECKLIST.md) and [Greasy Fork Markdown notes](GREASYFORK_CHANGELOG.md).
+Version **4.11** keeps the game chooser open while you move to it. The [project wiki](docs/wiki/Home.md) covers behavior and architecture. See the [release checklist](RELEASE_CHECKLIST.md) and [Greasy Fork Markdown notes](GREASYFORK_CHANGELOG.md).
 
 ## Features
 
